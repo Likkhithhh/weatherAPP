@@ -1,8 +1,17 @@
 # Weather App
 
+[![Static site check](https://github.com/Likkhithhh/weatherAPP/actions/workflows/static-site.yml/badge.svg)](https://github.com/Likkhithhh/weatherAPP/actions/workflows/static-site.yml)
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-yellow)
+![HTML5](https://img.shields.io/badge/HTML5-semantic-orange)
+![CSS3](https://img.shields.io/badge/CSS3-responsive-blue)
+
 A lightweight browser-based weather dashboard built with **HTML, CSS, and JavaScript**.
 
-The app lets a user search for a city and view the current temperature, humidity, weather condition, and wind speed. It uses the public **Open-Meteo** geocoding and forecast APIs, so no API key or secret is stored in the repository.
+The app resolves a location name with Open-Meteo geocoding and then fetches current weather data. It intentionally uses a **keyless public API**, so no credential has to be stored in the browser or repository.
+
+## Why this project matters
+
+This project demonstrates client-side API integration, asynchronous JavaScript, DOM updates, error handling, and basic security hygiene for public frontend applications.
 
 ## Features
 
@@ -11,23 +20,37 @@ The app lets a user search for a city and view the current temperature, humidity
 - Human-readable weather conditions
 - Wind-speed display
 - Enter-key and button search
-- No API key required
-- Simple static-site architecture suitable for GitHub Pages
+- Graceful loading/error states
+- No API key or secret required
+- Static-site architecture suitable for GitHub Pages
+
+## Architecture
+
+```text
+User search
+    ↓
+Open-Meteo Geocoding API
+    ↓
+Latitude / Longitude
+    ↓
+Open-Meteo Forecast API
+    ↓
+DOM-rendered current weather
+```
 
 ## Run locally
-
-You can open `index.html` directly in a browser, or serve the folder locally:
 
 ```bash
 python3 -m http.server 8000
 ```
 
-Then open `http://localhost:8000`.
+Open `http://localhost:8000`.
 
 ## Project structure
 
 ```text
 .
+├── .github/workflows/static-site.yml
 ├── index.html
 ├── styles.css
 ├── script.js
@@ -36,4 +59,11 @@ Then open `http://localhost:8000`.
 
 ## Security
 
-Do not commit API keys, passwords, tokens, or other credentials to a public repository. This version does not require a weather API key.
+The current version does **not** embed a weather API key. Credentials, tokens, and private configuration should never be committed to a public frontend repository.
+
+## Roadmap
+
+- Add a multi-day forecast
+- Add geolocation support
+- Add unit tests for weather-code mapping
+- Add GitHub Pages deployment
