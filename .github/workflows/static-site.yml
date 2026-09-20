@@ -1,0 +1,16 @@
+name: Static site check
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify required site files
+        run: |
+          test -f index.html
+          test -f styles.css
+          test -f script.js
