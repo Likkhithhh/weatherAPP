@@ -67,3 +67,18 @@ The current version does **not** embed a weather API key. Credentials, tokens, a
 - Add geolocation support
 - Add unit tests for weather-code mapping
 - Add GitHub Pages deployment
+
+
+---
+
+## Portfolio navigation
+
+Explore the rest of my GitHub portfolio:
+
+- [QOS-VIDEO](https://github.com/Likkhithhh/QOS-VIDEO) — machine-learning experiments for video-streaming QoS optimization
+- [weatherAPP](https://github.com/Likkhithhh/weatherAPP) — browser weather dashboard using public APIs
+- [pingSim](https://github.com/Likkhithhh/pingSim) — Python networking and latency simulator
+- [lexgen](https://github.com/Likkhithhh/lexgen) — educational lexer-generator and compiler-design project
+- [ATTENDENCEBOT](https://github.com/Likkhithhh/ATTENDENCEBOT) — face-recognition reference work for an attendance-system portfolio project
+
+**GitHub:** [Likkhithhh](https://github.com/Likkhithhh)
